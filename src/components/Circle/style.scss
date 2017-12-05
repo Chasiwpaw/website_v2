@@ -1,0 +1,27 @@
+.circle {
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  display: flex;
+  position: relative;
+  -moz-border-radius: 125px;
+  -webkit-border-radius: 125px;
+  justify-content: center;
+  align-items: center;
+
+  border: {
+    style: solid;
+    color: black;
+    radius: 125px;
+  }
+
+
+  &:hover {
+    border-color: red;
+  }
+
+  h4 {
+    position: absolute;
+    margin: inherit;
+  }
+}

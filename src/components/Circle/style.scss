@@ -1,20 +1,26 @@
-.circle {
-  height: 250px;
-  width: 250px;
-  // margin: 1em;
+.slide {
+  height: 350px;
+  width: 450px;
   display: flex;
-  position: relative;
-  -moz-border-radius: 125px;
-  -webkit-border-radius: 125px;
+  position: absolute;
   justify-content: center;
   align-items: center;
 
   border: {
     style: solid;
     color: black;
-    radius: 125px;
   }
+}
 
+.innerCircle {
+  position: absolute;
+  background: #a9aaab;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0px 0px -150px;
 
   &:hover {
     border-color: red;

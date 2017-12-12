@@ -36,8 +36,10 @@ class Circle extends React.Component {
       transform: `rotateY(${this.state.currentDegree}deg) translateZ(${this.props.rotation}px)`
     }
     return (
-      <div style={style} className="circle">
-        <h4>{this.props.name}</h4>
+      <div style={style} className="slide">
+        <div className="innerCircle">
+          <h4>{this.props.name}</h4>
+        </div>
       </div>
     )
   }

@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   a {
     box-shadow: none;
@@ -14,7 +14,6 @@
     cursor: pointer;
     border-radius: 0 3px 3px 0;
     color: black;
-    transition: 0.6s ease;
 
     &:hover {
       background-color: red;
@@ -22,23 +21,27 @@
   }
 
   .item {
-    display: inherit;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 30em;
+    align-items: center;
+    transform: perspective(1500px);
+    transform-style: preserve-3d;
 
-    .circle {
-      perspective: 1000px;
-      transform-style: preserve-3d;
+    .slide {
+      transition: 0.6s ease;
 
       &:nth-child(1) {
-        background-color: blue;
+        background-color: rgba(0, 0, 255, 0.5);
       }
 
       &:nth-child(2) {
-        background-color: green;
+        background-color: rgba(0, 255, 0, 0.5);
       }
 
       &:nth-child(3) {
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.5);
       }
     }
 

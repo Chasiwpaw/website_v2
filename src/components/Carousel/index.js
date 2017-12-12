@@ -27,13 +27,13 @@ class Carousel extends React.Component {
 
   handleNextOnClick = () => {
     this.setState(prevState => ({
-      selectedSlide: 1
+      selectedSlide: -1
     }))
   }
 
   handleBackOnClick = () => {
     this.setState(prevState => ({
-      selectedSlide: -1
+      selectedSlide: 1
     }))
   }
 

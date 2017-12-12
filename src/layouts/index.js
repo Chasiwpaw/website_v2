@@ -14,9 +14,10 @@ class Template extends React.Component {
           padding: 0
         }}>
         <Carousel>
-          <Circle text="1" url="#" offsetWidth={250} />
-          <Circle text="2" url="#" offsetWidth={250} />
-          <Circle text="3" url="#" offsetWidth={250} />
+          <Circle text="1" url="#" offsetWidth={450} />
+          <Circle text="2" url="#" offsetWidth={450} />
+          <Circle text="3" url="#" offsetWidth={450} />
+          {/* <Circle text="4" url="#" offsetWidth={450} /> */}
         </Carousel>
       </Container>
     )

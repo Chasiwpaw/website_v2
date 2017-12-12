@@ -1,7 +1,7 @@
 .circle {
   height: 250px;
   width: 250px;
-  margin: auto;
+  // margin: 1em;
   display: flex;
   position: relative;
   -moz-border-radius: 125px;
@@ -22,6 +22,6 @@
 
   h4 {
     position: absolute;
-    margin: inherit;
+    margin: auto;
   }
 }

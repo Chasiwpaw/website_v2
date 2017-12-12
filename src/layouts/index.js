@@ -1,73 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { Container } from 'react-responsive-grid'
+import {Container} from 'react-responsive-grid'
+import {rhythm, scale} from '../utils/typography'
 import Circle from '../components/Circle'
-import { rhythm, scale } from '../utils/typography'
+import Carousel from '../components/Carousel'
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
-    let header
-
-    let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
-    }
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Gatsby Starter Blog
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            Gatsby Starter Blog
-          </Link>
-          <Circle text="hello" url="#"/>
-        </h3>
-      )
-    }
     return (
       <Container
         style={{
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {<Circle text="hello" url="#" />}
-        {children()}
+          maxWidth: rhythm(40),
+          padding: 0
+        }}>
+        <Carousel>
+          <Circle text="1" url="#" offsetWidth={250} />
+          <Circle text="2" url="#" offsetWidth={250} />
+          <Circle text="3" url="#" offsetWidth={250} />
+        </Carousel>
       </Container>
     )
   }

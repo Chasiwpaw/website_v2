@@ -14,8 +14,7 @@ class Carousel extends React.Component {
     const slideCount = this.props.children.length
     const theta = 360 / slideCount
     const rotation =
-      this.props.children[0].props.offsetWidth /
-      2 /
+      (this.props.children[0].props.offsetWidth / 2) /
       Math.tan(theta / 2 * (Math.PI / 180))
 
     this.setState(() => ({
@@ -28,13 +27,13 @@ class Carousel extends React.Component {
 
   handleNextOnClick = () => {
     this.setState(prevState => ({
-      selectedSlide: prevState.selectedSlide + 1
+      selectedSlide: 1
     }))
   }
 
   handleBackOnClick = () => {
     this.setState(prevState => ({
-      selectedSlide: prevState.selectedSlide - 1
+      selectedSlide: -1
     }))
   }
 
@@ -46,8 +45,9 @@ class Carousel extends React.Component {
           name: this.props.name,
           rotation: this.state.rotation,
           theta: this.state.theta,
-          position: this.state.selectedSlide + index,
-          initialDegree: this.state.theta * index
+          position: this.state.selectedSlide,
+          initialDegree: this.state.theta * index,
+          index: index,
         })
     )
 

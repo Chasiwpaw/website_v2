@@ -28,7 +28,7 @@ class Circle extends React.Component {
    * Only rerender when currentDegree updates
    */
   shouldComponentUpdate(nextProps, nextState) {
-    return (this.state.currentDegree !== nextState.currentDegree)
+    return (this.state.currentDegree !== nextState.currentDegree) || (this.props.rotation === 0)
   }
 
   render() {

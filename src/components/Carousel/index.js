@@ -16,7 +16,7 @@ class Carousel extends React.Component {
     const rotation =
       (this.props.children[0].props.offsetWidth / 2) /
       Math.tan(theta / 2 * (Math.PI / 180))
-
+    
     this.setState(() => ({
       theta,
       slideCount,
